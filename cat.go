@@ -1,6 +1,6 @@
 package svn
 
-func (repo *Repo) Cat(target string, revision string) (out []byte, err error) {
+func (repo *Repo) CatRev(target string, revision string) (out []byte, err error) {
 	var (
 		path string
 	)
@@ -14,4 +14,8 @@ func (repo *Repo) Cat(target string, revision string) (out []byte, err error) {
 		return
 	}
 	return
+}
+
+func (repo *Repo) Cat(target string) (out []byte, err error) {
+	return repo.CatRev(target, "HEAD")
 }
