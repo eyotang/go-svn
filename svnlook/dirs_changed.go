@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"svn-hook/moment"
+	"github.com/eyotang/go-svn/moment"
 )
 
 type DirsChanged struct {
