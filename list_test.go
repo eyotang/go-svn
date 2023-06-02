@@ -1,6 +1,7 @@
 package svn
 
 import (
+	"fmt"
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
@@ -24,7 +25,7 @@ func TestList_Files(t *testing.T) {
 
 		for _, e := range elements.Entries {
 			actual = append(actual, e.Name)
-			//fmt.Println(e)
+			fmt.Println(e)
 		}
 		So(actual, ShouldResemble, dirs)
 	})
