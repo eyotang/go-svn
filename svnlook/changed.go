@@ -2,10 +2,12 @@ package svnlook
 
 import (
 	"encoding/json"
-	"github.com/pkg/errors"
 	"regexp"
 	"strings"
-	"svn-hook/moment"
+
+	"github.com/pkg/errors"
+
+	"github.com/eyotang/go-svn/moment"
 )
 
 var (
