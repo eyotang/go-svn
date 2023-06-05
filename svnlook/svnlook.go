@@ -67,6 +67,9 @@ func Decode(command string, buf *bytes.Buffer) (result []Result, err error) {
 	case "log":
 		l := &Log{Content: content}
 		result = append(result, l)
+	case "author":
+		author := &Author{Name: strings.TrimSpace(content)}
+		result = append(result, author)
 	case "changed":
 		for scanner.Scan() {
 			line := scanner.Text()
